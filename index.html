@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ishika Singhla | Data Analyst</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0f172a;
+  color: white;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: #020617;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+nav a:hover {
+  color: #38bdf8;
+}
+
+/* Sections */
+.section {
+  display: none;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+}
+
+.active {
+  display: flex;
+}
+
+/* Button */
+.btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #38bdf8;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Cards */
+.card {
+  background: #1e293b;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  width: 350px;
+}
+
+/* Skills */
+.skills span {
+  display: inline-block;
+  background: #1e293b;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+  <h2>Ishika.</h2>
+  <ul>
+    <li><a onclick="showPage('home')">Home</a></li>
+    <li><a onclick="showPage('about')">About</a></li>
+    <li><a onclick="showPage('projects')">Projects</a></li>
+    <li><a onclick="showPage('skills')">Skills</a></li>
+    <li><a onclick="showPage('contact')">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Home -->
+<div id="home" class="section active">
+  <h1>Hi, I'm Ishika Singhla 👋</h1>
+  <p>Data Analyst | SQL | Python | Power BI | Machine Learning</p>
+  <a class="btn" onclick="showPage('projects')">View My Work</a>
+</div>
+
+<!-- About -->
+<div id="about" class="section">
+  <h1>About Me</h1>
+  <p style="max-width: 700px;">
+    Aspiring Data Analyst with a strong foundation in data cleaning, analysis, and visualization.
+    Skilled in SQL, Excel, Python, and Power BI to extract insights and support data-driven decision-making.
+    Experienced in handling real-world datasets, identifying trends, and building dashboards that solve business problems.
+    Passionate about transforming raw data into meaningful insights that drive growth and efficiency.
+  </p>
+</div>
+
+<!-- Projects -->
+<div id="projects" class="section">
+  <h1>Projects</h1>
+
+  <div class="card">
+    <h3>🤖 Machine Learning Project: Reducing Underfitting</h3>
+
+    <p>• Identified and diagnosed underfitting (high bias) using low training and testing performance</p>
+    <p>• Improved model accuracy from ~48% to 95%+ using advanced ML techniques</p>
+    <p>• Applied feature engineering, polynomial features, and hyperparameter tuning</p>
+    <p>• Used ensemble models (Random Forest, Gradient Boosting) to capture complex patterns</p>
+
+    <a href="https://github.com/ishikasinghla9/underfitting-machine-learning" target="_blank" style="color:#38bdf8;">
+      🔗 View Project
+    </a>
+  </div>
+
+</div>
+
+<!-- Skills -->
+<div id="skills" class="section">
+  <h1>Skills</h1>
+
+  <div class="skills">
+    <span>Advanced Excel</span>
+    <span>SQL</span>
+    <span>Python</span>
+    <span>Power BI</span>
+    <span>Machine Learning</span>
+  </div>
+</div>
+
+<!-- Contact -->
+<div id="contact" class="section">
+  <h1>Contact Me</h1>
+  <p>Email: your-ishikasinghla9@gmail.com</p>
+  <p>GitHub: https://github.com/ishikasinghla9</p>
+  <p>LinkedIn: your-linkedin</p>
+</div>
+
+<!-- JavaScript -->
+<script>
+function showPage(pageId) {
+  const sections = document.querySelectorAll('.section');
+  sections.forEach(section => {
+    section.classList.remove('active');
+  });
+
+  document.getElementById(pageId).classList.add('active');
+}
+</script>
+
+</body>
+</html>
